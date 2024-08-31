@@ -1,0 +1,63 @@
+
+// --- 自動連跳 ---
+    alias maybe_jump
+    alias maybe_duck_jump
+    alias maybe_tdeduck
+    alias duck_jump_once "+duck; +jump; alias maybe_clean_duck_after_shoot -duck; alias maybe_duck_jump;"
+    alias set_tdeduck "alias maybe_clean_duck_after_shoot; alias t t_deduck"
+    alias t_deduck "maybe_ta; -duck; -duck; -duck; alias t maybe_ta"
+
+    alias maybe_tc
+    alias maybe_ta
+    alias tc_c tc_1
+    alias maybe_dejump "-jump"
+    alias maybe_pjump "+jump"
+    alias disable_auto_jump "alias maybe_pjump"
+
+    alias tc_1 "maybe_ta; maybe_duck_jump; alias tc_c tc_2;"
+    alias tc_2 "maybe_ta; alias tc_c tc_3;"
+    alias tc_3 "maybe_ta; alias tc_c tc_4;"
+    alias tc_4 "maybe_ta; alias tc_c tc_5;"
+    alias tc_5 "maybe_ta; alias tc_c tc_6;"
+    alias tc_6 "maybe_ta; alias tc_c tc_7;"
+    alias tc_7 "maybe_ta; alias tc_c tc_8;"
+    alias tc_8 "maybe_ta; alias tc_c tc_9;"
+    alias tc_9 "maybe_ta; alias tc_c tc_10;"
+    alias tc_10 "maybe_dejump; maybe_ta; alias tc_c tc_11;"
+    alias tc_11 "maybe_ta; alias tc_c tc_12;"
+    alias tc_12 "maybe_ta; alias tc_c tc_13;"
+    alias tc_13 "maybe_ta; alias tc_c tc_14;"
+    alias tc_14 "maybe_ta; alias tc_c tc_15;"
+    alias tc_15 "maybe_ta; alias tc_c tc_16;"
+    alias tc_16 "maybe_ta; alias tc_c tc_17;"
+    alias tc_17 "maybe_ta; alias tc_c tc_18;"
+    alias tc_18 "maybe_ta; alias tc_c tc_19;"
+    alias tc_19 "maybe_ta; alias tc_c tc_20;"
+    alias tc_20 "maybe_pjump; maybe_ta; alias tc_c tc_21;"
+    alias tc_21 "maybe_ta; alias tc_c tc_22;"
+    alias tc_22 "maybe_ta; alias tc_c tc_23;"
+    alias tc_23 "maybe_ta; alias tc_c tc_24;"
+    alias tc_24 "maybe_ta; alias tc_c tc_25;"
+    alias tc_25 "maybe_ta; alias tc_c tc_26;"
+    alias tc_26 "maybe_ta; alias tc_c tc_27;"
+    alias tc_27 "maybe_ta; alias tc_c tc_28;"
+    alias tc_28 "maybe_ta; alias tc_c tc_29;"
+    alias tc_29 "maybe_ta; alias tc_c tc_30;"
+    alias tc_30 "maybe_dejump; maybe_ta; alias tc_c tc_1;"
+
+    alias bhop_on "alias tc_c tc_1; alias t tc_c"
+    alias bhop_off "alias t maybe_ta"
+
+    alias +super_jump "maybe_enable_jd; spec_mode; disable_strafe; bhop_on; maybe_jump; cl_hud_color 10; alias maybe_tc tc_c;"
+    alias -super_jump "disable_jd; -jump; bhop_off; enable_strafe; restore_hud_color; maybe_tdeduck; alias maybe_tc"
+    bind space +super_jump
+
+    alias enable_jd "alias maybe_duck_jump duck_jump_once; alias maybe_tdeduck set_tdeduck;"
+    alias disable_jd "alias maybe_duck_jump; alias maybe_tdeduck;"
+    alias maybe_enable_jd "enable_jd"
+
+    alias switch_jd turn_off_jd
+    alias turn_on_jd "alias maybe_enable_jd enable_jd; alias maybe_jump; alias switch_jd turn_off_jd;play sounds/ui/beepclear.vsnd;"
+    alias turn_off_jd "alias maybe_enable_jd; alias maybe_jump +jump; alias switch_jd turn_on_jd;play sounds/ui/weapon_cant_buy.vsnd;"
+  //turn_on_jd
+    turn_off_jd
