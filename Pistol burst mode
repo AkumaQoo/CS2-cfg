@@ -1,0 +1,51 @@
+// --- 手槍連發模式 ---
+ // 使用 2 鍵切換手槍連發模式
+    alias s2_0 "slot2; maybe_enable_strafe; RF_OFF;"
+    alias s2_1 "slot2; maybe_enable_strafe; RF_READY;"
+    alias first_press2_use s2_1
+    alias disable_1step_rf "alias first_press2_use s2_0;" 
+
+    alias restore_hud_color "cl_hud_color 3;"
+    alias maybe_disable_rf
+
+    alias RF_OFF "maybe_disable_rf; alias maybe_disable_rf; alias restore_hud_color cl_hud_color 3; cl_hud_color 3; bind 2 s2_1; bind mouse1 +shootr;"
+    alias RF_READY "alias restore_hud_color cl_hud_color 5; alias maybe_disable_rf -enable_rf_v5; cl_hud_color 5; bind 2 s2_0; bind mouse1 +enable_rf_v5;"
+    alias RF_LOCKED "maybe_disable_rf; alias maybe_disable_rf; alias restore_hud_color cl_hud_color 3; cl_hud_color 3; bind 2 first_press2_use; bind mouse1 +shootr;"
+
+    alias ta_c ta_1
+
+    alias ta_1 "alias ta_c ta_2"
+    alias ta_2 "alias ta_c ta_3"
+    alias ta_3 "alias ta_c ta_4"
+    alias ta_4 "alias ta_c ta_5"
+    alias ta_5 "-attack; alias ta_c ta_6"
+    alias ta_6 "alias ta_c ta_7"
+    alias ta_7 "alias ta_c ta_8"
+    alias ta_8 "alias ta_c ta_9"
+    alias ta_9 "alias ta_c ta_10"
+    alias ta_10 "+attack; alias ta_c ta_1;"
+
+    alias may_deattack_in_rf 
+
+    alias +enable_rf_v5 "expand_crosshair; +attack; alias may_deattack_in_rf -attack; alias ta_c ta_1; alias t ta_c; alias maybe_ta ta_c;"
+    alias -enable_rf_v5 "shrink_crosshair; may_deattack_in_rf; alias may_deattack_in_rf; alias maybe_ta; alias t maybe_tc; "
+
+    alias RF_LOCKED_WHEELDOWN "spec_mode; invnext; maybe_enable_strafe; RF_LOCKED; disable_quick_switch;"
+    alias RF_LOCKED_WHEELUP "spec_mode; invprev; maybe_enable_strafe; RF_LOCKED; disable_quick_switch;"
+
+  //bind mwheeldown "RF_LOCKED_WHEELDOWN"
+  //bind mwheelup "RF_LOCKED_WHEELUP"
+
+    alias s1_0 "slot1; enable_strafe; RF_LOCKED; disable_quick_switch"
+    bind 1 "s1_0"
+    alias s3_0 "slot3; disable_strafe; set_maybe_enable_strafe; RF_LOCKED; disable_quick_switch"
+    bind 3 "s3_0"
+    alias s4_0 "slot4; enable_strafe; RF_LOCKED; enable_quick_switch"
+ // 預設按 2 自動進入速射: 如果需要設定為按 2 預設不進入速射請使用下面的程式碼
+ // disable_1step_rf
+
+    bind "" "+use"
+    alias drop_SR "RF_LOCKED; drop"
+    bind "G" "drop_SR"
+
+    RF_OFF;
