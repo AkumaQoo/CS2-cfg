@@ -1,0 +1,124 @@
+alias t 
+alias t0 t
+alias t1 t
+alias t2 t
+alias t3 t
+alias t4 t
+alias t5 t
+alias t6 t
+alias t7 t
+alias t8 t
+alias t9 t
+
+// exec configs 9 times 1ms apart to achieve 1ms ticks for hours while keeping relatively small file size
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+sleep 1
+exec_async all_in_one_v2/ticks/0
+exec_async all_in_one_v2/ticks/1
+exec_async all_in_one_v2/ticks/2
+exec_async all_in_one_v2/ticks/3
+exec_async all_in_one_v2/ticks/4
+exec_async all_in_one_v2/ticks/5
+exec_async all_in_one_v2/ticks/6
+exec_async all_in_one_v2/ticks/7
+exec_async all_in_one_v2/ticks/8
+exec_async all_in_one_v2/ticks/9
+
+
+echo post-patch all_in_one_v2/ticks config by ruby rain (steamcommunity.com/id/r_by)
+echo should last about 6 hours, make sure to re-exec while in lobby once it stops working!!
+alias dont_execute_this_again "sv_cheats 0; echo Async Bypass is already to use."
